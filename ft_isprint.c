@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 13:02:58 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/19 13:07:02 by lganda           ###   ########.fr       */
+/*   Updated: 2023/08/20 23:33:31 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(char c)
 {
-	int	printable;
-
-	printable = 1;
 	if (c < ' ' || c > '~')
-		printable = 0;
-	return (printable);
+		return (0);
+	else
+		return (1);
 }

@@ -1,14 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/19 12:42:20 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/20 23:33:11 by lganda           ###   ########.fr       */
+/*   Created: 2023/08/20 22:29:12 by lgandari          #+#    #+#             */
+/*   Updated: 2023/08/20 23:30:30 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_isdigit(char c);
+int	ft_isalpha(char c);
+
+int	ft_isalnum(char c)
+{
+	if (ft_isdigit(c) || ft_isalpha(c))
+		return (1);
+	else
+		return (0);
+}
 
 int	ft_isdigit(char c)
 {
@@ -17,15 +28,13 @@ int	ft_isdigit(char c)
 	else
 		return (1);
 }
-/*
-#include <stdio.h>
-int	main(int argc, char **argv)
+
+int	ft_isalpha(char c)
 {
-	if (argc == 2)
-	{
-		printf("Numeric = %d", ft_isdigit(argv[1][0]));
+	if (c < 'A' || c > 'z')
 		return (0);
-	}
+	if ('Z' < c && c < 'a')
+		return (0);
 	else
-		return (0);
-}*/
+		return (1);
+}

@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/19 13:17:22 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/20 23:34:12 by lganda           ###   ########.fr       */
+/*   Created: 2023/08/20 23:06:20 by lgandari          #+#    #+#             */
+/*   Updated: 2023/08/20 23:33:57 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+//#include <stdio.h>
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
+	unsigned int	result;
 
 	i = 0;
-	while (src[i])
-		i++;
 	j = 0;
-	if (size != 0)
+	while (dest[i] && i < size)
+		i++;
+	while (src[j] && ((i + j + 1) < size))
 	{
-		while (src[j] != '\0' && j < size - 1)
-		{
-			dest[j] = src[j];
-			j++;
-		}
-		dest[j] = '\0';
+		dest[i + j] = src[j];
+		j++;
 	}
-	return (i);
+	if (i != size)
+		dest[i + j] = '\0';
+	while (src[j])
+		j++;
+	result = i + j;
+	return (result);
 }
-
 /*
 int     main(void)
 {
-        char    a[10] = "Hola";
-        char    b[10] = "Ad";
+        unsigned int    size;
+        char                    dest[25] = "Hola";
+        char                    src[25] = "amigo";
 
-        ft_strlcpy(a, b, 2);
-        printf("%s", b);
+        size = 0;
+        printf("%u\n", ft_strlcat(dest, src, size));
         return (0);
 }*/

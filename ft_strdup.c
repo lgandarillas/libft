@@ -1,31 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/19 12:42:20 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/20 23:33:11 by lganda           ###   ########.fr       */
+/*   Created: 2023/08/20 23:15:46 by lgandari          #+#    #+#             */
+/*   Updated: 2023/08/20 23:20:34 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+#include <stdlib.h>
+#include <stdio.h>
+
+char	*ft_strdup(char *src)
 {
-	if (c < '0' || c > '9')
-		return (0);
-	else
-		return (1);
+	char	*dest;
+	int		i;
+
+	i = 1;
+	while (src[i])
+		i++;
+	dest = malloc(sizeof(char) * (i + 1));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 /*
-#include <stdio.h>
-int	main(int argc, char **argv)
+int     main(void)
 {
-	if (argc == 2)
-	{
-		printf("Numeric = %d", ft_isdigit(argv[1][0]));
-		return (0);
-	}
-	else
-		return (0);
+        char *str = "Hola";
+        char *dst;
+
+        dst = ft_strdup(str);
+        printf("%s", dst);
+        return (0);
 }*/

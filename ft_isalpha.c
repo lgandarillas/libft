@@ -3,23 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 12:23:19 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/19 12:30:51 by lganda           ###   ########.fr       */
+/*   Updated: 2023/08/20 23:31:00 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(char c)
 {
-	int	alpha;
-
-	alpha = 1;
 	if (c < 'A' || c > 'z')
-		alpha = 0;
+		return (0);
 	if ('Z' < c && c < 'a')
-		alpha = 0;
-	return (alpha);
+		return (0);
+	else
+		return (1);
 }
 /*
 #include <stdio.h>
