@@ -6,48 +6,34 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:22:51 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/21 00:02:13 by lganda           ###   ########.fr       */
+/*   Updated: 2023/08/25 13:31:30 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	res;
 	int	sign;
 
 	res = 0;
 	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	if (*nptr == '+')
+		nptr++;
+	else if (*nptr == '-')
 	{
 		sign = -1;
-		str++;
+		nptr++;
 	}
-	if (*str == '+' || *str == '-')
+	if (*nptr == '+' || *nptr == '-')
 		return (0);
-	while (*str >= '0' && *str <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		res = res * 10 + *str - '0';
-		str++;
+		res = res * 10 + *nptr - '0';
+		nptr++;
 	}
 	return (res * sign);
 }
-/*
-int     main(void)
-{
-        char    str[] = "2147483648";
-        int             real;
-        int             fake;
-
-        real = atoi(str);
-        fake = ft_atoi(str);
-        printf("Real: %d\n", real);
-        printf("Fake: %d", fake);
-        return (0);
-}*/

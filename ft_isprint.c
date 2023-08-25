@@ -6,11 +6,11 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 13:02:58 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/20 23:33:31 by lganda           ###   ########.fr       */
+/*   Updated: 2023/08/25 11:53:44 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c < ' ' || c > '~')
 		return (0);

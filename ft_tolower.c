@@ -6,11 +6,11 @@
 /*   By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 12:29:59 by lganda            #+#    #+#             */
-/*   Updated: 2023/08/24 12:33:34 by lganda           ###   ########.fr       */
+/*   Updated: 2023/08/25 13:04:31 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c -= 'A' - 'a';
