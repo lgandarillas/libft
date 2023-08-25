@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/20 23:39:20 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/24 10:40:20 by lganda           ###   ########.fr       */
+/*   Created: 2023/08/24 12:29:59 by lganda            #+#    #+#             */
+/*   Updated: 2023/08/24 12:33:34 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+char	ft_tolower(char c)
 {
-	if ((c < 0) || (c > 127))
-		return (0);
-	else
-		return (1);
+	if (c >= 'A' && c <= 'Z')
+		c -= 'A' - 'a';
+	return (c);
 }

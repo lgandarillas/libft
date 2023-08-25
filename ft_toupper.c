@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/20 23:39:20 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/24 10:40:20 by lganda           ###   ########.fr       */
+/*   Created: 2023/08/24 12:19:31 by lgandari          #+#    #+#             */
+/*   Updated: 2023/08/24 12:24:09 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+char	ft_toupper(char c)
 {
-	if ((c < 0) || (c > 127))
-		return (0);
-	else
-		return (1);
+	if (c >= 'a' && c <= 'z')
+		c -= 'a' - 'A';
+	return (c);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("a -> %c", ft_toupper('a'));
+	return (0);
+}*/
