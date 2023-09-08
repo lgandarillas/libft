@@ -6,7 +6,7 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 16:55:31 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/26 17:11:06 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/08 13:48:36 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,4 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	else
 		return (NULL);
-}
+
