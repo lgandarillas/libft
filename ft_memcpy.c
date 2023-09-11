@@ -6,7 +6,7 @@
 /*   By: lgandari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 12:06:41 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/11 13:06:45 by lgandari         ###   ########.fr       */
+/*   Updated: 2023/09/11 16:51:36 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
-	}	
+	}
 	return ((char *)dst);
 }
