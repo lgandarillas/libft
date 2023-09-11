@@ -6,7 +6,7 @@
 /*   By: lgandari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 12:06:41 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/11 16:51:36 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/11 19:01:22 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (!dst || !src)
+	if (!dst && !src)
 		return (0);
 	i = 0;
 	while (i < n)

@@ -6,7 +6,7 @@
 /*   By: lgandari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 12:58:39 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/11 15:05:51 by lgandari         ###   ########.fr       */
+/*   Updated: 2023/09/11 19:04:57 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
-	if (!s1 || !s2)
-		return (0);
 	i = 0;
 	while (i < n)
 	{

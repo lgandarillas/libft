@@ -6,7 +6,7 @@
 /*   By: lgandari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:26:45 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/11 16:44:58 by lgandari         ###   ########.fr       */
+/*   Updated: 2023/09/11 19:03:44 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*daux;
 	size_t	i;
 
+	if (!dst && !src)
+		return (0);
 	saux = (char *)src;
 	daux = (char *)dst;
 	i = 0;
