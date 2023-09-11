@@ -6,13 +6,15 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 12:35:07 by lgandari          #+#    #+#             */
-/*   Updated: 2023/08/24 12:39:03 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/11 11:49:24 by lgandari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, int n)
+#include "libft.h"
+
+void	ft_bzero(char *s, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
