@@ -6,7 +6,7 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 10:50:25 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/11 11:34:35 by lgandari         ###   ########.fr       */
+/*   Updated: 2023/09/12 09:36:42 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	i = 0;
 	buffer = (char *)malloc(size * nmemb);
-	if (buffer == NULL)
+	if (!buffer)
 		return (NULL);
 	while (i < nmemb * size)
 	{
