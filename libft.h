@@ -6,7 +6,7 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 13:35:13 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/13 15:38:38 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/14 11:48:46 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
