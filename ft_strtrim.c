@@ -6,7 +6,7 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:40:23 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/15 22:33:44 by lgandari         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:40:53 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	start = 0;
 	while (s1[start] != '\0' && ft_strchr(set, s1[start]) != NULL)
-			start++;
+		start++;
 	end = ft_strlen(&s1[start]);
 	if (end != 0)
-		while (s1[start + end - 1] && ft_strchr(set, s1[start + end - 1]))
-				end--;
+		while (s1[start + end - 1]
+			&& ft_strchr(set, s1[start + end - 1]))
+			end--;
 	snew = (char *)malloc(sizeof(char) * (end + 1));
 	if (!snew)
 		return (NULL);
