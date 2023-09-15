@@ -6,7 +6,7 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:35:22 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/14 17:39:26 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/15 22:25:32 by lgandari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	l2 = ft_strlen(s2);
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (l1 + l2 + 1));
+	if (!str)
+		return (NULL);
 	while (*s1)
 	{
 		str[i] = *s1;
