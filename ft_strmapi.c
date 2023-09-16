@@ -6,11 +6,11 @@
 /*   By: lgandari <lgandar@student.42madrid.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 12:22:53 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/16 12:36:51 by lgandari         ###   ########.fr       */
+/*   Updated: 2023/09/16 22:47:53 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
