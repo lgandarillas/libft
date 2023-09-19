@@ -6,7 +6,7 @@
 /*   By: lgandari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 22:02:50 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/19 13:05:47 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/19 18:53:59 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,20 @@ char	**ft_split(char const *s, char c)
 	}
 	return (aux);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	**arr;
+	int	i;
+
+	i = 0;
+	arr = ft_split("hello!", ' ');
+	while (i < 1)
+	{
+		printf("%s", arr[i]);
+		printf("\n");
+		i++;
+	}
+	return (0);
+}*/
