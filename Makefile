@@ -6,7 +6,7 @@
 #    By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 18:46:19 by lganda            #+#    #+#              #
-#    Updated: 2023/09/20 19:30:07 by lganda           ###   ########.fr        #
+#    Updated: 2023/09/20 19:43:10 by lganda           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-bonus:	$(B_OBJ)
+bonus:	$(B_OBJ) $(OBJ)
 	$(AR) $(NAME) $(B_OBJ)
 
 clean:
