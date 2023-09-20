@@ -6,7 +6,7 @@
 /*   By: lgandari <lgandari@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 13:35:13 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/15 22:17:43 by lgandari         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:00:34 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}			t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
