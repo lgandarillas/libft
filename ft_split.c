@@ -6,7 +6,7 @@
 /*   By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:48:33 by lganda            #+#    #+#             */
-/*   Updated: 2023/09/20 16:06:09 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/20 17:17:40 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	ft_freesplit(char **str)
 		free(str[i]);
 		i++;
 	}
-	free(str);
 }
 
 size_t	calcpartsize(char const *s, char c)
@@ -60,6 +59,7 @@ int	ft_allocatepart(char **aux, size_t partsize, size_t i)
 	if (!aux)
 	{
 		ft_freesplit(aux);
+		free(aux);
 		return (1);
 	}
 	return (0);
@@ -100,12 +100,15 @@ int     main(void)
         int     i;
 
         i = 0;
-        arr = ft_split("hello ! que tal estas ", ' ');
-        while (i < 5)
+        arr = ft_split("hello!", ' ');
+	printf("%d\n", ft_countparts("hello!", ' '));
+	while (i < 1)
         {
                 printf("%s", arr[i]);
                 printf("\n");
                 i++;
         }
+	
+	ft_freesplit(arr);
         return (0);
 }*/
