@@ -6,7 +6,7 @@
 /*   By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:48:33 by lganda            #+#    #+#             */
-/*   Updated: 2023/09/20 17:17:40 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/20 18:35:32 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ size_t	calcpartsize(char const *s, char c)
 int	ft_allocatepart(char **aux, size_t partsize, size_t i)
 {
 	aux[i] = (char *)malloc(sizeof(char) * (partsize + 1));
-	if (!aux)
+	if (!aux[i])
 	{
 		ft_freesplit(aux);
 		free(aux);
