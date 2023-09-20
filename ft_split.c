@@ -6,7 +6,7 @@
 /*   By: lgandari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 22:02:50 by lgandari          #+#    #+#             */
-/*   Updated: 2023/09/19 18:53:59 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/20 15:32:11 by lganda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 	aux = ft_calloc(sizeof(char *), ft_countparts(s, c) + 1);
 	if (aux == NULL)
 	{
-		ft_freesplit(aux);
+		free(aux);
 		return (NULL);
 	}
 	while (s[i] != '\0' && (part < ft_countparts(s, c)))
