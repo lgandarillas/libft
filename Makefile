@@ -6,7 +6,7 @@
 #    By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 18:46:19 by lganda            #+#    #+#              #
-#    Updated: 2023/09/20 19:43:10 by lganda           ###   ########.fr        #
+#    Updated: 2023/09/22 22:00:59 by lgandari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,5 +53,5 @@ fclean: clean
 
 re: fclean all
 
-.SILENT: all $(NAME) $(OBJ) bonus clean fclean
+.SILENT: all $(NAME) $(OBJ) $(B_OBJ) bonus clean fclean
 .PHONY: all clean fclean re bonus
