@@ -71,31 +71,43 @@ The **atoi** function is used to convert a string containing numeric characters 
 The **calloc** function is used for dynamic memory allocation, specifically for allocating and initializing a block of memory for an array of elements. It takes two arguments: the number of elements to allocate memory for and the size (in bytes) of each element. It allocates a contiguous block of memory that can hold the specified number of elements, and it initializes all the bytes to zero. The function returns a pointer to the first byte of the allocated memory block. If memory allocation fails, it returns a null pointer. **calloc** is often used when you need to allocate memory for an array or a data structure and ensure that all its elements are initially set to zero. After using the allocated memory, it should be freed using the **free** function to avoid memory leaks.
 ### strdup
 ```char	*ft_strdup(const char *s);```  
-The **strdup** function is used to create a new dynamically allocated string by duplicating an existing null-terminated string. The function takes a string as its argument, allocates memory to hold a copy of the string (including the null-terminator), copies the original string into the newly allocated memory, and returns a pointer to the duplicated string. The newly created string is essentially a deep copy of the input string.
+The **strdup** function is used to create a new dynamically allocated string by duplicating an existing null-terminated string. The function takes a string as its argument, allocates memory to hold a copy of the string (including the null-terminator), copies the original string into the newly allocated memory, and returns a pointer to the duplicated string. The newly created string is essentially a deep copy of the input string.  
 
 ## Parte 2 - Additional functions
 ### ft_substr
-```char	*ft_substr(char const *s, unsigned int start, size_t len);```
+```char	*ft_substr(char const *s, unsigned int start, size_t len);```  
+The **ft_substr** function allocates memory using malloc and returns a substring of the string s. The substring begins at the index specified by start and has a maximum length of len. The function returns the resulting substring or NULL if memory allocation fails.
 ### ft_strjoin
-```char	*ft_strjoin(char const *s1, char const *s2);```
+```char	*ft_strjoin(char const *s1, char const *s2);```  
+The **ft_strjoin** function allocates memory using malloc and returns a new string, formed by the concatenation of 's1' and 's2'. The function returns the new string or NuLL if memory allocation fails.
 ### ft_strtrim
-```char	*ft_strtrim(char const *s1, char const *set);```
+```char	*ft_strtrim(char const *s1, char const *set);```  
+The **ft_strtrim** functiion removes all characters from the string 'set' from the beginning and from the end of 's1', until it finds a character not belonging to 'set'. The resulting string is returned with memory allocated using malloc. It returns the trimmed string, or NULL if memory allocation fails.
 ### ft_split
-```char	**ft_split(char const *s, char c);```
+```char	**ft_split(char const *s, char c);```  
+The **ft_split** function takes a string s and a delimiter character c as input and splits the string into an array of substrings based on the delimiter. It returns a pointer to an array of strings, where each element of the array represents a separate substring extracted from s using c as the separator. 
 ### ft_itoa
-```char	*ft_itoa(int n);```
+```char	*ft_itoa(int n);```  
+The **ft_itoa** function takes an integer n as input and converts it into a null-terminated string (char array) representing the integer in base 10 (decimal). It dynamically allocates memory for the resulting string using malloc and returns a pointer to this newly created string.
 ### ft_strmapi
-```char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));```
+```char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));```  
+The **ft_strmapi** function takes two parameters: a string s and a function pointer f. Its purpose is to apply the function f to each character of the string s, with f taking two arguments: an unsigned integer representing the index of the character in the string and the character itself. The function then creates a new string with the modified characters resulting from the application of f and returns a pointer to this newly created string. 
 ### striteri
-```void    ft_striteri(char *s, void (*f)(unsigned int, char*));```
+```void    ft_striteri(char *s, void (*f)(unsigned int, char*));```  
+The **ft_striteri** function takes two parameters: a string s and a function pointer f. Its purpose is to apply the function f to each character in the string s while also passing the index (position) of the character as the first argument to f. The function f is defined to take two parameters: an unsigned integer representing the index and a pointer to the character.
 ### ft_putchar_fd
-```void	ft_putchar_fd(char c, int fd);```
+```void	ft_putchar_fd(char c, int fd);```  
+The **ft_putchar_fd** function takes two parameters: a character c and an integer file descriptor fd. Its purpose is to write the character c to the output stream associated with the given file descriptor fd.
 ### ft_putstr_fd
-```void	ft_putstr_fd(char *s, int fd);```
+```void	ft_putstr_fd(char *s, int fd);```  
+The ft_putstr_fd function takes two parameters: a string s and an integer file descriptor fd. Its purpose is to write the characters from the string s to the output stream associated with the given file descriptor fd.
 ### ft_putendl_fd
-```void	ft_putendl_fd(char *s, int fd);```
+```void	ft_putendl_fd(char *s, int fd);```  
+The **ft_putendl_fd** function takes two parameters: a string s and an integer file descriptor fd. Its purpose is to write the characters from the string s to the output stream associated with the given file descriptor fd, followed by a newline character ('\n'). 
 ### ft_putnbr_fd
-```void	ft_putnbr_fd(int n, int fd);```
+```void	ft_putnbr_fd(int n, int fd);```  
+The ft_putnbr_fd function is a custom C function that takes two parameters: an integer n and an integer file descriptor fd. Its purpose is to write the integer value n to the output stream associated with the given file descriptor fd.  
+
 ## Parte bonus - List manipulation
 ```
 typedef struct	s_list
