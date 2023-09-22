@@ -4,15 +4,15 @@ El proyecto "libft" de 42 School implica crear una biblioteca en C con funciones
 ## Parte 1 - Funciones de libc
 Consiste en rehacer las funciones de **libc** con los mismos prototipos y que implementen los mismos comportamientos que las funciones originales.
 ### ialpha
-int	ft_isalpha(int c);
+```int	ft_isalpha(int c);```
 ### isdigit
-int	ft_isdigit(int c);
+```int	ft_isdigit(int c);```
 ### isalnum
-int	ft_isalnum(int c);
+```int	ft_isalnum(int c);```
 ### isascii
-int	ft_isascii(int c);
+```int	ft_isascii(int c);```
 ### isprint
-int	ft_isprint(int c);
+```int	ft_isprint(int c);```
 ### strlen
 ### memset
 ### bzero
@@ -21,9 +21,9 @@ int	ft_isprint(int c);
 ### strlcpy
 ### strlcat
 ### toupper
-int	ft_toupper(int c);
+```int	ft_toupper(int c);```
 ### tolower
-int	ft_tolower(int c);
+```int	ft_tolower(int c);```
 ### strchr
 ### strrchr
 ### strncmp
@@ -48,11 +48,13 @@ int	ft_tolower(int c);
 ### ft_putnbr_fd
 
 ## Parte bonus - Manipulación de listas
+```
 typedef struct	s_list
 {
-	void			*content;
+	void		*content;
  	struct s_list	*next;
-}					t_list;
+}			t_list;
+```
 ### ft_lstnew
 ### ft_lstadd_front
 ### ft_lstsize
