@@ -4,22 +4,22 @@ El proyecto "libft" de 42 School implica crear una biblioteca en C con funciones
 ## Parte 1 - Funciones de libc
 Consiste en rehacer las funciones de **libc** con los mismos prototipos y que implementen los mismos comportamientos que las funciones originales.
 ### ialpha
-```int	ft_isalpha(int c);```
+```int	ft_isalpha(int c);```  
 It is used to determine if a character is a letter of the alphabet, regardless of whether it's uppercase or lowercase.  If the character is alphabetic, it returns 1; otherwise, returns 0.
 ### isdigit
-```int	ft_isdigit(int c);```
+```int	ft_isdigit(int c);```  
 The **isdigit** function in C is employed to check whether a character is a numeric digit, and it returns 1 if the character is a digit and 0 otherwise.
 ### isalnum
-```int	ft_isalnum(int c);```
+```int	ft_isalnum(int c);```  
 The **isalnum** function in C is utilized to ascertain if a character is either a letter of the alphabet (uppercase or lowercase) or a numeric digit. It returns 1 if the character is alphanumeric and 0 if it's not.
 ### isascii
-```int	ft_isascii(int c);```
+```int	ft_isascii(int c);```  
 The **isascii** function in C is employed to check if a character is within the ASCII character set, returning 1 if the character is an ASCII character and 0 if it's not.
 ### isprint
-```int	ft_isprint(int c);```
+```int	ft_isprint(int c);```  
 The **isprint** function in C is used to determine whether a character is a printable character in the ASCII character set. If the character is printable, it returns 1; otherwise, it returns 0.
 ### strlen
-```size_t	ft_strlen(const char *s);```
+```size_t	ft_strlen(const char *s);```  
 The **strlen** function in C is utilized to calculate the length of a null-terminated string, returning the count of characters in the string excluding the null terminator.
 ### memset
 ```void	*ft_memset(void *b, int c, size_t n);```
