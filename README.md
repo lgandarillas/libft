@@ -52,19 +52,26 @@ The **strchr** function in C is used to find the first occurrence of a specified
 ```char	*ft_strrchr(const char *s, int c);```  
 The **strrchr** function in C is used to find the last occurrence of a specified character within a given string. It searches the string from the end toward the beginning and returns a pointer to the last occurrence of the character if found, or a null pointer if the character is not present in the string.
 ### strncmp
-```int	ft_strncmp(const char *s1, const char *s2, size_t n);```
+```int	ft_strncmp(const char *s1, const char *s2, size_t n);```  
+The **strncmp** function is used to compare two strings character by character up to a specified maximum number of characters or until a terminating null character is encountered in either string, whichever comes first. It returns 0 if the specified portions of the two strings are identical, a negative value if the first string is lexicographically less than the second, and a positive value if the first string is lexicographically greater.
 ### memchr
-```void	*ft_memchr(const void *s, int c, size_t n);```
+```void	*ft_memchr(const void *s, int c, size_t n);```  
+The **memchr** function is used to search for the first occurrence of a specified byte value within a given block of memory. It scans the memory block and returns a pointer to the first occurrence of the specified byte if found, or a null pointer if the byte is not present in the memory block.
 ### memcmp
-```int	ft_memcmp(const void *s1, const void *s2, size_t n);```
+```int	ft_memcmp(const void *s1, const void *s2, size_t n);```  
+The **memcmp** function in C is used to compare two blocks of memory byte by byte. It takes two memory pointers and a specified number of bytes to compare. It returns an integer value indicating the result of the comparison. If the two blocks of memory are identical, it returns 0. If the first differing byte in the first block is less than the corresponding byte in the second block, it returns a negative value. If the first differing byte in the first block is greater, it returns a positive value. 
 ### strnstr
-```char	*ft_strnstr(const char *big, const char *little, size_t len);```
+```char	*ft_strnstr(const char *big, const char *little, size_t len);```  
+The **strnstr** function is used to locate the first occurrence of a substring within a given string, similar to strstr. The key difference is that strnstr also takes a maximum length parameter, limiting the search within a specified number of characters from the beginning of the string. If the substring is found within the specified length, it returns a pointer to the first occurrence of the substring; otherwise, it returns a null pointer.
 ### atoi
-```int	ft_atoi(const char *nptr);```
+```int	ft_atoi(const char *nptr);```  
+The **atoi** function is used to convert a string containing numeric characters (integer representation) into an integer value. It takes a null-terminated character string as input, processes it from left to right, and converts the characters into an integer until it encounters a non-numeric character or the end of the string. The resulting integer value is returned. If the input string does not begin with a valid numeric representation, or if it encounters non-numeric characters before any valid numeric characters, atoi returns 0.
 ### calloc
-```void	*ft_calloc(size_t nmemb, size_t size);```
+```void	*ft_calloc(size_t nmemb, size_t size);```  
+The **calloc** function is used for dynamic memory allocation, specifically for allocating and initializing a block of memory for an array of elements. It takes two arguments: the number of elements to allocate memory for and the size (in bytes) of each element. It allocates a contiguous block of memory that can hold the specified number of elements, and it initializes all the bytes to zero. The function returns a pointer to the first byte of the allocated memory block. If memory allocation fails, it returns a null pointer. **calloc** is often used when you need to allocate memory for an array or a data structure and ensure that all its elements are initially set to zero. After using the allocated memory, it should be freed using the **free** function to avoid memory leaks.
 ### strdup
-```char	*ft_strdup(const char *s);```
+```char	*ft_strdup(const char *s);```  
+The **strdup** function is used to create a new dynamically allocated string by duplicating an existing null-terminated string. The function takes a string as its argument, allocates memory to hold a copy of the string (including the null-terminator), copies the original string into the newly allocated memory, and returns a pointer to the duplicated string. The newly created string is essentially a deep copy of the input string.
 
 ## Parte 2 - Additional functions
 ### ft_substr
