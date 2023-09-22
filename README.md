@@ -92,7 +92,7 @@ The **ft_itoa** function takes an integer n as input and converts it into a null
 ### ft_strmapi
 ```char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));```  
 The **ft_strmapi** function takes two parameters: a string s and a function pointer f. Its purpose is to apply the function f to each character of the string s, with f taking two arguments: an unsigned integer representing the index of the character in the string and the character itself. The function then creates a new string with the modified characters resulting from the application of f and returns a pointer to this newly created string. 
-### striteri
+### ft_striteri
 ```void    ft_striteri(char *s, void (*f)(unsigned int, char*));```  
 The **ft_striteri** function takes two parameters: a string s and a function pointer f. Its purpose is to apply the function f to each character in the string s while also passing the index (position) of the character as the first argument to f. The function f is defined to take two parameters: an unsigned integer representing the index and a pointer to the character.
 ### ft_putchar_fd
