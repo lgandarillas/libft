@@ -117,20 +117,29 @@ typedef struct	s_list
 }			t_list;
 ```
 ### ft_lstnew
-```t_list	*ft_lstnew(void *content);```
+```t_list	*ft_lstnew(void *content);```  
+The **ft_lstnew** function creates and initializes a new node in a linked list. It takes a pointer to some data as its parameter and allocates memory for a new node, setting its content to the provided data and initializing the reference to the next node (typically to NULL for the first node).
 ### ft_lstadd_front
-```void	ft_lstadd_front(t_list **lst, t_list *new);```
+```void	ft_lstadd_front(t_list **lst, t_list *new);```  
+The **ft_lstadd_front** function is used for adding a new node to the front of a linked list. It takes two parameters: lst, a pointer to the pointer at the beginning of the list, and new, a pointer to the new node to be added. This function efficiently inserts the new node as the list's new head, with the previous head becoming the next node. 
 ### ft_lstsize
-```int	ft_lstsize(t_list *lst);```
+```int	ft_lstsize(t_list *lst);```  
+The function **ft_lstsize** calculates and returns the number of nodes (elements) in a linked list. It takes a pointer to the first node of the list (lst) as its parameter and iterates through the list while counting the nodes.
 ### ft_lstlast
-```t_list	*ft_lstlast(t_list *lst);```
+```t_list	*ft_lstlast(t_list *lst);```  
+The **ft_lstlast** function takes a pointer to the first node of a list (lst) and returns a pointer to the last node in the list. This function is useful for quickly accessing and manipulating the last element in a linked list, allowing for efficient operations on the list's tail."
 ### ft_lstadd_back
-```void	ft_lstadd_back(t_list **lst, t_list *new);```
+```void	ft_lstadd_back(t_list **lst, t_list *new);```  
+The **ft_lstadd_back** function takes two parameters: lst, a pointer to the pointer at the beginning of the list, and new, a pointer to the new node to be added. This function efficiently inserts the new node at the end of the list, adjusting the next node pointers accordingly.
 ### ft_lstdelone
-```void	ft_lstdelone(t_list *lst, void (*del)(void *));```
+```void	ft_lstdelone(t_list *lst, void (*del)(void *));```  
+The **ft_lstdelone** function is used for deleting a single node within a linked list. It takes two parameters: lst, a pointer to the node to be deleted, and del, a function pointer to a custom function that can free the memory associated with the node's content. This function removes the specified node from the list and optionally frees the memory of the content it holds, ensuring proper memory management in linked lists.
 ### ft_lstclear
-```void	ft_lstclear(t_list **lst, void (*del)(void *));```
+```void	ft_lstclear(t_list **lst, void (*del)(void *));```  
+The **ft_lstclear** function clears and deletes an entire linked list. It takes two parameters: lst, a pointer to the pointer at the beginning of the list, and del, a function pointer to a custom function capable of freeing the memory associated with the list's content. This function efficiently removes all nodes from the list, optionally freeing the memory of each node's content, and then sets the list's head pointer to NULL.
 ### ft_lstiter
-```void	ft_lstiter(t_list *lst, void (*f)(void *));```
+```void	ft_lstiter(t_list *lst, void (*f)(void *));```  
+The **ft_lstiter** function is used for iterating through a linked list and applying a custom function f to each node's content. It takes two parameters: lst, a pointer to the first node of the list, and f, a function pointer to the custom function. This function iterates through the list, invoking f on each node's content, typically for performing custom operations or transformations on the list's elements.
 ### ft_lstmap
-```t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));```
+```t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));```  
+The **ft_lstmap** function used for mapping (transforming) a linked list into a new linked list by applying a custom function f to each node's content. It takes three parameters: lst, a pointer to the first node of the source list, f, a function pointer to the custom function that transforms each element, and del, a function pointer that can free the memory associated with the original content. This function iterates through the source list, applies f to each node's content to create new content, and constructs a new linked list from the transformed elements.
