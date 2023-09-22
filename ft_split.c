@@ -6,7 +6,7 @@
 /*   By: lganda <lgandari@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:48:33 by lganda            #+#    #+#             */
-/*   Updated: 2023/09/20 18:35:32 by lganda           ###   ########.fr       */
+/*   Updated: 2023/09/22 22:28:43 by lgandari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,23 +92,3 @@ char	**ft_split(char const *s, char c)
 	aux[i] = NULL;
 	return (aux);
 }
-/*
-#include <stdio.h>
-int     main(void)
-{
-        char    **arr;
-        int     i;
-
-        i = 0;
-        arr = ft_split("hello!", ' ');
-	printf("%d\n", ft_countparts("hello!", ' '));
-	while (i < 1)
-        {
-                printf("%s", arr[i]);
-                printf("\n");
-                i++;
-        }
-	
-	ft_freesplit(arr);
-        return (0);
-}*/
