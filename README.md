@@ -3,11 +3,16 @@ El proyecto "libft" de 42 School implica crear una biblioteca en C con funciones
 
 ## Parte 1 - Funciones de libc
 Consiste en rehacer las funciones de **libc** con los mismos prototipos y que implementen los mismos comportamientos que las funciones originales.
+### ialpha
+int	ft_isalpha(int c);
 ### isdigit
-### isdigit
+int	ft_isdigit(int c);
 ### isalnum
+int	ft_isalnum(int c);
 ### isascii
+int	ft_isascii(int c);
 ### isprint
+int	ft_isprint(int c);
 ### strlen
 ### memset
 ### bzero
@@ -16,7 +21,9 @@ Consiste en rehacer las funciones de **libc** con los mismos prototipos y que im
 ### strlcpy
 ### strlcat
 ### toupper
+int	ft_toupper(int c);
 ### tolower
+int	ft_tolower(int c);
 ### strchr
 ### strrchr
 ### strncmp
