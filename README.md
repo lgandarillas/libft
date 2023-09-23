@@ -79,7 +79,7 @@ The **strdup** function is used to create a new dynamically allocated string by 
 The **ft_substr** function allocates memory using malloc and returns a substring of the string s. The substring begins at the index specified by start and has a maximum length of len. The function returns the resulting substring or NULL if memory allocation fails.
 ### ft_strjoin
 ```char	*ft_strjoin(char const *s1, char const *s2);```  
-The **ft_strjoin** function allocates memory using malloc and returns a new string, formed by the concatenation of 's1' and 's2'. The function returns the new string or NuLL if memory allocation fails.
+The **ft_strjoin** function allocates memory using malloc and returns a new string, formed by the concatenation of 's1' and 's2'. The function returns the new string or NULL if memory allocation fails.
 ### ft_strtrim
 ```char	*ft_strtrim(char const *s1, char const *set);```  
 The **ft_strtrim** functiion removes all characters from the string 'set' from the beginning and from the end of 's1', until it finds a character not belonging to 'set'. The resulting string is returned with memory allocated using malloc. It returns the trimmed string, or NULL if memory allocation fails.
