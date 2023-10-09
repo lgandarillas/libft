@@ -1,7 +1,7 @@
 # Libft
 The "libft" project at 42 School involves creating a C library with general-purpose functions. This library will serve as a foundation for future projects at 42 Madrid, teaching students essential skills in C programming and custom library creation. Once completed, it will be a key tool for students in their future projects.
 
-## Parte 1 - Functions of libc
+## Part 1 - Functions of libc
 It consists of remaking the functions of **libc** with the same prototypes and implementing the same behaviors as the original functions.
 ### ialpha
 ```int	ft_isalpha(int c);```  
