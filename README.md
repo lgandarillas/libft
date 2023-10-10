@@ -1,23 +1,23 @@
 # Libft
-The "libft" project at 42 School involves creating a C library with general-purpose functions. This library will serve as a foundation for future projects at 42 Madrid, teaching students essential skills in C programming and custom library creation. Once completed, it will be a key tool for students in their future projects.
+The **libft** project at [**42 School**](https://42.fr/en/homepage/) involves creating a C library with general-purpose functions. This library will serve as a foundation for future projects at 42, teaching students essential skills in C programming and custom library creation.
 
 ## Part 1 - Functions of libc
 It consists of remaking the functions of **libc** with the same prototypes and implementing the same behaviors as the original functions.
 ### ialpha
 ```int	ft_isalpha(int c);```  
-It is used to determine if a character is a letter of the alphabet, regardless of whether it's uppercase or lowercase.  If the character is alphabetic, it returns 1; otherwise, returns 0.
+It is used to determine if a character is a letter of the alphabet, regardless of whether it's uppercase or lowercase.
 ### isdigit
 ```int	ft_isdigit(int c);```  
-The **isdigit** function in C is employed to check whether a character is a numeric digit, and it returns 1 if the character is a digit and 0 otherwise.
+The **isdigit** is used to determine whether a character is a numeric digit or not.
 ### isalnum
 ```int	ft_isalnum(int c);```  
-The **isalnum** function in C is utilized to ascertain if a character is either a letter of the alphabet (uppercase or lowercase) or a numeric digit. It returns 1 if the character is alphanumeric and 0 if it's not.
+The **isalnum** function in C is used to ascertain if a character is either a letter of the alphabet (uppercase or lowercase) or a numeric digit.
 ### isascii
 ```int	ft_isascii(int c);```  
-The **isascii** function in C is employed to check if a character is within the ASCII character set, returning 1 if the character is an ASCII character and 0 if it's not.
+The **isascii** function in C is employed to check if a character is within the ASCII character set.
 ### isprint
 ```int	ft_isprint(int c);```  
-The **isprint** function in C is used to determine whether a character is a printable character in the ASCII character set. If the character is printable, it returns 1; otherwise, it returns 0.
+The **isprint** function in C is used to determine whether a character is a printable character in the ASCII character set.
 ### strlen
 ```size_t	ft_strlen(const char *s);```  
 The **strlen** function in C is utilized to calculate the length of a null-terminated string, returning the count of characters in the string excluding the null terminator.
@@ -73,7 +73,7 @@ The **calloc** function is used for dynamic memory allocation, specifically for 
 ```char	*ft_strdup(const char *s);```  
 The **strdup** function is used to create a new dynamically allocated string by duplicating an existing null-terminated string. The function takes a string as its argument, allocates memory to hold a copy of the string (including the null-terminator), copies the original string into the newly allocated memory, and returns a pointer to the duplicated string. The newly created string is essentially a deep copy of the input string.  
 
-## Parte 2 - Additional functions
+## Part 2 - Additional functions
 ### ft_substr
 ```char	*ft_substr(char const *s, unsigned int start, size_t len);```  
 The **ft_substr** function allocates memory using malloc and returns a substring of the string s. The substring begins at the index specified by start and has a maximum length of len. The function returns the resulting substring or NULL if memory allocation fails.
@@ -108,7 +108,7 @@ The **ft_putendl_fd** function takes two parameters: a string s and an integer f
 ```void	ft_putnbr_fd(int n, int fd);```  
 The ft_putnbr_fd function is a custom C function that takes two parameters: an integer n and an integer file descriptor fd. Its purpose is to write the integer value n to the output stream associated with the given file descriptor fd.  
 
-## Parte bonus - List manipulation
+## Bonus - List manipulation
 ```
 typedef struct	s_list
 {
